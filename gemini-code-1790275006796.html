@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Mạo Từ Tiếng Anh (Articles) - Ms Lê Hằng English</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #8854C0, #FDCB6E, #00C9A7, #FF7675, #6C5CE7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            padding: 20px 10px 60px 10px;
+            color: #2d3436;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bg-patterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.25;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><g fill="%23FFFFFF"><path d="M20 10l3 6 6 3-6 3-3 6-3-6-6-3 6-3z"/><circle cx="80" cy="30" r="8"/><path d="M100 80c0 5-5 10-10 10s-10-5-10-10 5-10 10-10 10 5 10 10z"/><path d="M30 90l5-10 10 5-5 10z"/><path d="M70 100l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></g></svg>');
+            animation: floatPatterns 20s linear infinite;
+        }
+
+        @keyframes floatPatterns {
+            from { background-position: 0 0; }
+            to { background-position: 120px 240px; }
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .teacher-badge {
+            display: inline-block;
+            background: #ffffff;
+            color: #6C5CE7;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+            border: 2px solid #6C5CE7;
+            transform: rotate(-1deg);
+        }
+
+        .main-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 2px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 12px;
+        }
+
+        .reminder-card {
+            background: #FFF9E6;
+            border: 3px solid #FFEAA7;
+            border-left: 8px solid #FDCB6E;
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .reminder-title {
+            color: #D63031;
+            font-weight: 900;
+            font-size: 17px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .reminder-text {
+            color: #2d3436;
+            font-size: 14.5px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .reminder-highlight {
+            display: block;
+            margin-top: 8px;
+            color: #6C5CE7;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .question-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border: 3px solid #F0F0F0;
+            transition: transform 0.2s ease;
+            position: relative;
+        }
+
+        .q-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            border-bottom: 2px dashed #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .q-number {
+            background: #6C5CE7;
+            color: white;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 4px 14px;
+            border-radius: 12px;
+            box-shadow: 0 3px 0 #4b38b3;
+        }
+
+        .q-type {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #b2bec3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .q-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .q-text u {
+            color: #e84393;
+            font-weight: 900;
+            text-decoration-color: #e84393;
+            text-decoration-thickness: 3px;
+            padding: 0 2px;
+        }
+
+        .q-text b {
+            color: #6C5CE7;
+            font-weight: 900;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .opt-btn {
+            background: #F8F9FA;
+            border: 2px solid #E9ECEF;
+            border-bottom: 5px solid #DEE2E6;
+            border-radius: 18px;
+            padding: 13px 16px;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #495057;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            outline: none;
+            user-select: none;
+        }
+
+        .opt-btn:hover:not([disabled]) {
+            transform: translateY(-2px) scale(1.01);
+            background: #EDF2F7;
+            border-color: #CBD5E0;
+        }
+
+        .opt-btn:active:not([disabled]) {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        .opt-prefix {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #E2E8F0;
+            color: #4A5568;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .opt-btn.correct {
+            background: #E6F9F0 !important;
+            border-color: #00D26A !important;
+            border-bottom: 5px solid #00A852 !important;
+            color: #007A3D !important;
+        }
+        .opt-btn.correct .opt-prefix {
+            background: #00D26A !important;
+            color: white !important;
+        }
+
+        .opt-btn.wrong {
+            background: #FFEAEA !important;
+            border-color: #FF4757 !important;
+            border-bottom: 5px solid #D63031 !important;
+            color: #C0392B !important;
+            animation: shake 0.4s ease;
+        }
+        .opt-btn.wrong .opt-prefix {
+            background: #FF4757 !important;
+            color: white !important;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        .explanation-box {
+            display: none;
+            margin-top: 18px;
+            background: #F3F0FF;
+            border: 2px dashed #9B51E0;
+            border-radius: 18px;
+            padding: 16px 18px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .explanation-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .exp-head {
+            font-weight: 900;
+            color: #6C5CE7;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .exp-section {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: #2d3436;
+        }
+
+        .exp-section strong {
+            color: #6C5CE7;
+        }
+
+        .exp-list {
+            margin-left: 12px;
+            list-style: none;
+        }
+
+        .exp-list li {
+            margin-bottom: 3px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .exp-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8854C0;
+            font-weight: bold;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .submit-btn {
+            background: #00D26A;
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            padding: 16px 45px;
+            border: none;
+            border-bottom: 6px solid #00A852;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 210, 106, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            background: #00E676;
+        }
+
+        .submit-btn:active {
+            transform: translateY(3px);
+            border-bottom-width: 2px;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: 28px;
+            max-width: 500px;
+            width: 100%;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 4px solid #6C5CE7;
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-score {
+            font-size: 48px;
+            font-weight: 900;
+            color: #6C5CE7;
+            margin: 10px 0;
+        }
+
+        .modal-msg {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            background: #F8F9FA;
+            padding: 16px;
+            border-radius: 16px;
+            border-left: 5px solid #6C5CE7;
+        }
+
+        .close-modal-btn {
+            background: #6C5CE7;
+            color: white;
+            border: none;
+            border-bottom: 4px solid #4b38b3;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-patterns"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="teacher-badge">👩‍🏫 Giáo viên tạo: Ms Lê Hằng English</div>
+            <h1 class="main-title">🎯 CHUYÊN ĐỀ MẠO TỪ (ARTICLES TEST) - EMPIRE TEAM</h1>
+        </header>
+
+        <div class="reminder-card">
+            <div class="reminder-title">
+                <span>⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</span>
+            </div>
+            <div class="reminder-text">
+                Chỉ có đọc kỹ giải thích quy tắc mạo từ ngay sau mỗi câu, sau đó ghi chú lại quy tắc/cụm từ cố định vào vở thì mới thực sự nắm chắc bài.<br>
+                Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!
+                <span class="reminder-highlight">* Kéo tới đâu, làm tới đó! *</span>
+            </div>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="submit-container">
+            <button class="submit-btn" onclick="submitQuiz()">NỘP BÀI THI 🚀</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-card">
+            <div style="font-size: 50px;">🏆</div>
+            <h2 style="font-weight: 900; color:#2d3436;">KẾT QUẢ BÀI LÀM</h2>
+            <div class="modal-score" id="score-text">0 / 50</div>
+            <div class="modal-msg" id="comment-text">...</div>
+            <button class="close-modal-btn" onclick="closeModal()">ĐÓNG VÀ XEM LẠI BÀI 📝</button>
+        </div>
+    </div>
+
+    <script>
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioContext();
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                if (type === 'correct') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(659.25, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(1318.51, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.4);
+                } else if (type === 'wrong') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(160, audioCtx.currentTime + 0.15);
+                    osc.frequency.setValueAtTime(110, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.45);
+                }
+            } catch (e) {
+                console.log("Audio waiting for user gesture", e);
+            }
+        }
+
+        const rawQuestions = [
+            {
+                type: "ARTICLES",
+                question: "Question 1: Finding _____ balance between professional success and personal fulfillment is _____ lifelong challenge for many people.",
+                options: [
+                    { text: "a / a", correct: true },
+                    { text: "the / a", correct: false },
+                    { text: "the / the", correct: false },
+                    { text: "a / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Tìm kiếm sự cân bằng giữa thành công nghề nghiệp và sự viên mãn cá nhân là một thử thách cả đời đối với nhiều người.",
+                    optionsDict: [
+                        "Vị trí 1: Cụm 'find a balance between A and B' (tìm kiếm một sự cân bằng)",
+                        "Vị trí 2: 'a lifelong challenge' (một thử thách kéo dài cả đời - danh từ đếm được lần đầu nhắc tới)"
+                    ],
+                    whyCorrect: "Cả hai vị trí đều nhắc đến danh từ số ít lần đầu mang ý nghĩa chung 'một...', nên dùng mạo từ bất định 'a / a'.",
+                    whyIncorrect: "Các phương án chứa 'the' sai vì các đối tượng chưa được xác định cụ thể từ trước."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 2: _____ integrity is considered one of the most essential qualities for any leader in _____ corporate world.",
+                options: [
+                    { text: "The / the", correct: false },
+                    { text: "Ø / the", correct: true },
+                    { text: "An / a", correct: false },
+                    { text: "Ø / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Sự liêm chính được coi là một trong những phẩm chất thiết yếu nhất đối với bất kỳ nhà lãnh đạo nào trong giới doanh nghiệp.",
+                    optionsDict: [
+                        "Vị trí 1: 'integrity' (sự liêm chính - danh từ trừu tượng không đếm được nói chung -> Ø)",
+                        "Vị trí 2: cụm từ cố định 'the corporate world' (thế giới doanh nghiệp -> dùng 'the')"
+                    ],
+                    whyCorrect: "Danh từ trừu tượng 'integrity' đứng đầu câu mang nghĩa khái quát không dùng mạo từ; 'the corporate world' là cụm từ cố định.",
+                    whyIncorrect: "Dùng 'The' ở vị trí đầu là thừa mạo từ."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 3: After working as _____ apprentice for _____ year, he finally secured a permanent position at the firm.",
+                options: [
+                    { text: "an / the", correct: false },
+                    { text: "a / a", correct: false },
+                    { text: "an / a", correct: true },
+                    { text: "the / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Sau khi làm việc như một người học việc trong một năm, anh ấy cuối cùng đã có được một vị trí chính thức tại công ty.",
+                    optionsDict: [
+                        "Vị trí 1: 'an apprentice' (apprentice bắt đầu bằng nguyên âm /ə/ nên dùng 'an')",
+                        "Vị trí 2: 'for a year' (trong một năm -> dùng 'a')"
+                    ],
+                    whyCorrect: "'Apprentice' bắt đầu bằng nguyên âm âm /ə/ nên dùng mạo từ 'an'; 'year' bắt đầu bằng bán nguyên âm /j/ nên dùng 'a'.",
+                    whyIncorrect: "Dùng 'a' trước 'apprentice' là sai quy tắc âm nguyên âm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 4: Many graduates are struggling to find _____ employment in _____ fields they specifically studied for at university.",
+                options: [
+                    { text: "Ø / the", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "an / Ø", correct: false },
+                    { text: "the / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Nhiều sinh viên tốt nghiệp đang vất vả tìm kiếm việc làm trong các lĩnh vực mà họ đã học chuyên sâu tại đại học.",
+                    optionsDict: [
+                        "Vị trí 1: 'employment' (việc làm - danh từ không đếm được nói chung -> Ø)",
+                        "Vị trí 2: 'the fields they specifically studied for...' (các lĩnh vực được xác định bởi mệnh đề quan hệ phía sau -> 'the')"
+                    ],
+                    whyCorrect: "'Employment' là danh từ không đếm được chung; 'fields' đã được giới hạn xác định rõ nên dùng 'the'.",
+                    whyIncorrect: "Dùng mạo từ cho 'employment' là sai đối với danh từ không đếm được khái quát."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 5: It is often said that _____ university education provides _____ students with more than just academic knowledge.",
+                options: [
+                    { text: "a / the", correct: false },
+                    { text: "the / Ø", correct: false },
+                    { text: "a / Ø", correct: true },
+                    { text: "an / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Người ta thường nói rằng một nền giáo dục đại học cung cấp cho sinh viên nhiều thứ hơn là chỉ kiến thức hàn lâm.",
+                    optionsDict: [
+                        "Vị trí 1: 'a university education' ('university' phát âm bắt đầu bằng phụ âm /j/ -> dùng 'a')",
+                        "Vị trí 2: 'students' (sinh viên nói chung - danh từ số nhiều -> Ø)"
+                    ],
+                    whyCorrect: "'University' bắt đầu bằng phụ âm /j/ nên dùng 'a'; 'students' chỉ chung đối tượng số nhiều không dùng mạo từ.",
+                    whyIncorrect: "Dùng 'an' trước 'university' là lỗi phổ biến do nhìn nhầm chữ 'u' phát âm nguyên âm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 6: _____ technology has transformed _____ way we communicate, making physical borders almost irrelevant in business.",
+                options: [
+                    { text: "Ø / a", correct: false },
+                    { text: "The / the", correct: false },
+                    { text: "Ø / the", correct: true },
+                    { text: "The / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Công nghệ đã thay đổi cách chúng ta giao tiếp, làm cho ranh giới địa lý hầu như không còn quan trọng trong kinh doanh.",
+                    optionsDict: [
+                        "Vị trí 1: 'technology' (công nghệ nói chung -> Ø)",
+                        "Vị trí 2: cụm 'the way + mệnh đề' (cách thức mà... -> dùng 'the')"
+                    ],
+                    whyCorrect: "'Technology' nói chung không mạo từ; 'the way we communicate' là cấu trúc đã xác định.",
+                    whyIncorrect: "Dùng 'The' ở đầu làm hẹp nghĩa của khái niệm công nghệ nói chung."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 7: She decided to pursue _____ career in _____ environmental law to help combat global climate change.",
+                options: [
+                    { text: "a / the", correct: false },
+                    { text: "the / Ø", correct: false },
+                    { text: "the / the", correct: false },
+                    { text: "a / Ø", correct: true }
+                ],
+                explanation: {
+                    translation: "Cô ấy quyết định theo đuổi một sự nghiệp trong ngành luật môi trường để giúp chống lại sự biến đổi khí hậu toàn cầu.",
+                    optionsDict: [
+                        "Vị trí 1: 'pursue a career in' (theo đuổi một sự nghiệp -> 'a')",
+                        "Vị trí 2: 'environmental law' (ngành luật môi trường nói chung -> Ø)"
+                    ],
+                    whyCorrect: "'Career' danh từ số ít đề cập lần đầu dùng 'a'; tên ngành học/lĩnh vực luật không dùng mạo từ.",
+                    whyIncorrect: "Thêm 'the' trước 'environmental law' là sai quy tắc ngành học khái quát."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 8: To become _____ expert in _____ digital marketing, one must constantly adapt to ever-changing algorithms.",
+                options: [
+                    { text: "an / Ø", correct: true },
+                    { text: "a / the", correct: false },
+                    { text: "an / the", correct: false },
+                    { text: "the / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Để trở thành một chuyên gia trong lĩnh vực tiếp thị kỹ thuật số, người ta phải liên tục thích nghi với các thuật toán luôn thay đổi.",
+                    optionsDict: [
+                        "Vị trí 1: 'an expert' ('expert' bắt đầu bằng nguyên âm /e/ -> dùng 'an')",
+                        "Vị trí 2: 'digital marketing' (ngành/lĩnh vực tiếp thị số nói chung -> Ø)"
+                    ],
+                    whyCorrect: "'Expert' bắt đầu bằng âm nguyên âm /e/ dùng 'an'; ngành học/chuyên môn dùng mạo từ rỗng Ø.",
+                    whyIncorrect: "Dùng 'a' trước 'expert' là sai ngữ âm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "Question 9: _____ job security is often prioritized by older workers, whereas younger ones value _____ flexibility more.",
+                options: [
+                    { text: "The / the", correct: false },
+                    { text: "Ø / Ø", correct: true },
+                    { text: "Ø / the", correct: false },
+                    { text: "The / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Sự an toàn công việc thường được những người lao động lớn tuổi ưu tiên, trong khi những người trẻ tuổi coi trọng sự linh hoạt hơn.",
+                    optionsDict: [
+                        "Vị trí 1: 'job security' (sự ổn định công việc - danh từ không đếm được nói chung -> Ø)",
+                        "Vị trí 2: 'flexibility' (sự linh hoạt - danh từ trừu tượng nói chung -> Ø)"
+                    ],
+                    whyCorrect: "Cả hai danh từ đều mang ý nghĩa trừu tượng, khái quát nên không sử dụng mạo từ ở cả hai khoảng trống.",
+                    whyIncorrect: "Các phương án có 'the' bị sai do xác định thừa."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "10. Many people believe that _____ richest individuals in the country should pay _____ higher taxes.",
+                options: [
+                    { text: "a / the", correct: false },
+                    { text: "the / Ø", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "Ø / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Nhiều người tin rằng những cá nhân giàu có nhất đất nước nên đóng mức thuế cao hơn.",
+                    optionsDict: [
+                        "Vị trí 1: 'the richest' (so sánh nhất -> luôn dùng 'the')",
+                        "Vị trí 2: 'higher taxes' (các khoản thuế cao hơn - danh từ số nhiều nói chung -> Ø)"
+                    ],
+                    whyCorrect: "Tính từ so sánh nhất luôn đi kèm 'the'; 'taxes' ở dạng số nhiều nói chung không dùng mạo từ.",
+                    whyIncorrect: "Dùng 'a' trước hình thức so sánh nhất là sai ngữ pháp."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "11. During _____ economic recession, it is common for _____ unemployment rate to rise significantly.",
+                options: [
+                    { text: "an / the", correct: true },
+                    { text: "the / Ø", correct: false },
+                    { text: "a / a", correct: false },
+                    { text: "an / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Trong một cuộc suy thoái kinh tế, việc tỷ lệ thất nghiệp gia tăng đáng kể là điều phổ biến.",
+                    optionsDict: [
+                        "Vị trí 1: 'an economic recession' ('economic' bắt đầu bằng nguyên âm /e/ -> 'an')",
+                        "Vị trí 2: 'the unemployment rate' (tỷ lệ thất nghiệp - cụm từ đã xác định cụ thể -> 'the')"
+                    ],
+                    whyCorrect: "'Economic' bắt đầu bằng âm nguyên âm dùng 'an'; 'unemployment rate' là danh từ đã xác định chỉ tỷ lệ cụ thể nên dùng 'the'.",
+                    whyIncorrect: "Dùng 'a' trước 'economic' là sai quy tắc âm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "12. He was given _____ opportunity to lead _____ project that could potentially change his career.",
+                options: [
+                    { text: "an / a", correct: true },
+                    { text: "an / the", correct: false },
+                    { text: "the / the", correct: false },
+                    { text: "a / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy đã được trao một cơ hội để dẫn dắt một dự án có khả năng thay đổi sự nghiệp của mình.",
+                    optionsDict: [
+                        "Vị trí 1: 'an opportunity' (opportunity bắt đầu bằng nguyên âm /ɒ/ -> 'an')",
+                        "Vị trí 2: 'a project' (một dự án chưa xác định lần đầu nhắc đến -> 'a')"
+                    ],
+                    whyCorrect: "'Opportunity' bắt đầu bằng nguyên âm dùng 'an'; 'project' chưa được xác định cụ thể trước đó nên dùng 'a'.",
+                    whyIncorrect: "Dùng 'a' trước 'opportunity' sai nguyên âm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "13. If you have _____ experience in _____ management, you will be a strong candidate for this role.",
+                options: [
+                    { text: "the / the", correct: false },
+                    { text: "an / Ø", correct: false },
+                    { text: "Ø / Ø", correct: true },
+                    { text: "an / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Nếu bạn có kinh nghiệm trong quản lý, bạn sẽ là một ứng viên sáng giá cho vị trí này.",
+                    optionsDict: [
+                        "Vị trí 1: 'experience' (kinh nghiệm - danh từ không đếm được -> Ø)",
+                        "Vị trí 2: 'management' (việc quản lý - danh từ không đếm được -> Ø)"
+                    ],
+                    whyCorrect: "Cả 'experience' và 'management' đều là danh từ không đếm được chỉ khái niệm chung nên không dùng mạo từ.",
+                    whyIncorrect: "Dùng 'an' trước 'experience' là sai vì ở đây mang nghĩa kinh nghiệm chung (không đếm được)."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "14. _____ communication is _____ key factor in resolving conflicts between employees and managers.",
+                options: [
+                    { text: "Ø / the", correct: false },
+                    { text: "The / the", correct: false },
+                    { text: "Ø / a", correct: true },
+                    { text: "The / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Giao tiếp là một yếu tố mấu chốt trong việc giải quyết xung đột giữa nhân viên và quản lý.",
+                    optionsDict: [
+                        "Vị trí 1: 'communication' (sự giao tiếp nói chung -> Ø)",
+                        "Vị trí 2: 'a key factor' (một yếu tố then chốt -> 'a')"
+                    ],
+                    whyCorrect: "'Communication' danh từ khái quát không mạo từ; 'key factor' danh từ số ít đếm được nhắc tới như một ví dụ nên dùng 'a'.",
+                    whyIncorrect: "Dùng 'The' ở vị trí đầu làm sai nét nghĩa tổng quát."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "15. Applying for _____ job abroad requires _____ thorough understanding of the destination country's visa regulations.",
+                options: [
+                    { text: "a / a", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / the", correct: false },
+                    { text: "the / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Nộp đơn xin một công việc ở nước ngoài đòi hỏi phải có một sự hiểu biết thấu đáo về quy định thị thực của nước đến.",
+                    optionsDict: [
+                        "Vị trí 1: 'a job abroad' (một công việc bất kỳ -> 'a')",
+                        "Vị trí 2: 'a thorough understanding' (một sự hiểu biết thấu đáo -> cụm 'a/an + Adj + understanding')"
+                    ],
+                    whyCorrect: "Cả hai danh từ đều mang nghĩa số ít chưa xác định lần đầu đề cập.",
+                    whyIncorrect: "Dùng 'the' làm bó hẹp đối tượng chưa được xác định trước đó."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "16. _____ Internet has made it possible for many freelancers to work from _____ home.",
+                options: [
+                    { text: "The / Ø", correct: true },
+                    { text: "Ø / the", correct: false },
+                    { text: "An / Ø", correct: false },
+                    { text: "The / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Mạng Internet đã giúp nhiều người làm nghề tự do có thể làm việc tại nhà.",
+                    optionsDict: [
+                        "Vị trí 1: 'The Internet' (danh từ duy nhất luôn đi với 'The')",
+                        "Vị trí 2: cụm từ cố định 'work from home' (làm việc tại nhà -> Ø)"
+                    ],
+                    whyCorrect: "'Internet' là duy nhất bắt buộc dùng 'The'; 'work from home' là cụm từ cố định không dùng mạo từ.",
+                    whyIncorrect: "Thiếu 'The' trước 'Internet' là sai quy tắc danh từ duy nhất."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "17. My brother is _____ honest man who always strives to do _____ right thing at work.",
+                options: [
+                    { text: "a / the", correct: false },
+                    { text: "an / the", correct: true },
+                    { text: "an / a", correct: false },
+                    { text: "a / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh trai tôi là một người đàn ông trung thực, người luôn cố gắng làm điều đúng đắn trong công việc.",
+                    optionsDict: [
+                        "Vị trí 1: 'an honest man' ('honest' có âm 'h' câm, bắt đầu bằng nguyên âm /ɒ/ -> dùng 'an')",
+                        "Vị trí 2: cụm 'do the right thing' (làm điều đúng đắn -> dùng 'the')"
+                    ],
+                    whyCorrect: "'Honest' bắt đầu bằng âm nguyên âm dùng 'an'; 'the right thing' là cụm cố định.",
+                    whyIncorrect: "Dùng 'a' trước 'honest' là lỗi quên chữ 'h' câm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "18. Most companies nowadays value _____ creativity just as much as _____ technical skills.",
+                options: [
+                    { text: "the / the", correct: false },
+                    { text: "the / Ø", correct: false },
+                    { text: "Ø / the", correct: false },
+                    { text: "Ø / Ø", correct: true }
+                ],
+                explanation: {
+                    translation: "Hầu hết các công ty ngày nay coi trọng sự sáng tạo cũng nhiều như các kỹ năng kỹ thuật.",
+                    optionsDict: [
+                        "Vị trí 1: 'creativity' (sự sáng tạo - danh từ không đếm được khái quát -> Ø)",
+                        "Vị trí 2: 'technical skills' (kỹ năng kỹ thuật - danh từ số nhiều khái quát -> Ø)"
+                    ],
+                    whyCorrect: "Cả hai khoảng trống đều chứa danh từ mang ý nghĩa khái quát chung nên không dùng mạo từ.",
+                    whyIncorrect: "Dùng 'the' sẽ biến khái niệm thành một nhóm kỹ năng cụ thể đã định."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "19. After finishing _____ university, she decided to take _____ year off to travel around Asia.",
+                options: [
+                    { text: "the / the", correct: false },
+                    { text: "Ø / a", correct: true },
+                    { text: "the / a", correct: false },
+                    { text: "Ø / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Sau khi học xong đại học, cô ấy quyết định nghỉ một năm để đi du lịch quanh châu Á.",
+                    optionsDict: [
+                        "Vị trí 1: 'finish university' (học xong đại học - dùng đúng mục đích giáo dục -> Ø)",
+                        "Vị trí 2: cụm 'take a year off' (nghỉ một năm -> dùng 'a')"
+                    ],
+                    whyCorrect: "'University' dùng với mục đích chính là học tập không dùng 'the'; 'take a year off' là collocations chuẩn.",
+                    whyIncorrect: "Thêm 'the' trước 'university' làm sai ngữ cảnh học tập chung."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "20. _____ information provided in this manual is essential for _____ safety of all factory workers.",
+                options: [
+                    { text: "Ø / the", correct: false },
+                    { text: "The / the", correct: true },
+                    { text: "The / Ø", correct: false },
+                    { text: "An / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Thông tin được cung cấp trong cuốn sách hướng dẫn này là thiết yếu cho sự an toàn của tất cả công nhân nhà máy.",
+                    optionsDict: [
+                        "Vị trí 1: 'The information provided...' (thông tin đã được giới hạn bởi mệnh đề phân tử 'provided...')",
+                        "Vị trí 2: 'the safety of...' (sự an toàn của... -> đã xác định)"
+                    ],
+                    whyCorrect: "Cả hai danh từ đều được xác định rõ bởi cụm bổ nghĩa phía sau nên bắt buộc dùng 'The / the'.",
+                    whyIncorrect: "Bỏ mạo từ ở vị trí đầu là không nhận ra mệnh đề rút gọn xác định."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "21. Having _____ strong command of _____ English is essential for anyone wanting to work in international trade.",
+                options: [
+                    { text: "a / Ø", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / the", correct: false },
+                    { text: "Ø / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Nắm vững tiếng Anh là điều cần thiết cho bất kỳ ai muốn làm việc trong ngành thương mại quốc tế.",
+                    optionsDict: [
+                        "Vị trí 1: cụm 'have a strong command of' (thành thạo/nắm vững cái gì)",
+                        "Vị trí 2: 'English' (tên ngôn ngữ -> Ø)"
+                    ],
+                    whyCorrect: "'have a strong command of' là cấu trúc cố định; tên ngôn ngữ không đi kèm mạo từ.",
+                    whyIncorrect: "Dùng 'the' trước 'English' là sai (chỉ dùng 'the English' khi nói về người Anh)."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "22. _____ ambition is _____ driving force behind many successful entrepreneurs in the tech industry.",
+                options: [
+                    { text: "The / the", correct: false },
+                    { text: "Ø / a", correct: true },
+                    { text: "An / the", correct: false },
+                    { text: "Ø / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Tham vọng là động lực thúc đẩy đằng sau nhiều doanh nhân thành công trong ngành công nghệ.",
+                    optionsDict: [
+                        "Vị trí 1: 'ambition' (tham vọng - danh từ trừu tượng khái quát -> Ø)",
+                        "Vị trí 2: cụm 'a driving force' (một động lực thúc đẩy -> 'a')"
+                    ],
+                    whyCorrect: "'Ambition' là danh từ trừu tượng chung; 'a driving force' biểu thị một nguyên nhân/động lực trong số nhiều yếu tố.",
+                    whyIncorrect: "Dùng 'The' ở đầu gây hẹp nghĩa khái niệm tham vọng."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "23. Most experts agree that _____ education is _____ best investment a country can make for its future.",
+                options: [
+                    { text: "Ø / the", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "an / a", correct: false },
+                    { text: "Ø / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Hầu hết các chuyên gia đều đồng ý rằng giáo dục là khoản đầu tư tốt nhất mà một quốc gia có thể thực hiện cho tương lai của mình.",
+                    optionsDict: [
+                        "Vị trí 1: 'education' (nền giáo dục nói chung -> Ø)",
+                        "Vị trí 2: 'the best investment' (so sánh nhất 'the best' -> dùng 'the')"
+                    ],
+                    whyCorrect: "'Education' là khái niệm trừu tượng chung không dùng mạo từ; 'the best' là so sánh nhất.",
+                    whyIncorrect: "Dùng 'a' trước 'best' là sai cấu trúc so sánh nhất."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "24. He was nominated as _____ candidate for _____ position of Chief Executive Officer.",
+                options: [
+                    { text: "a / the", correct: true },
+                    { text: "the / a", correct: false },
+                    { text: "an / the", correct: false },
+                    { text: "a / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy đã được đề cử làm ứng viên cho vị trí Tổng giám đốc điều hành.",
+                    optionsDict: [
+                        "Vị trí 1: 'a candidate' (một ứng viên -> 'a')",
+                        "Vị trí 2: 'the position of...' (vị trí đã được xác định cụ thể bởi danh hiệu đằng sau -> 'the')"
+                    ],
+                    whyCorrect: "'Candidate' lần đầu nhắc tới dùng 'a'; 'position of CEO' là vị trí cụ thể xác định nên dùng 'the'.",
+                    whyIncorrect: "Dùng 'an' trước 'candidate' là sai vì 'candidate' bắt đầu bằng phụ âm /k/."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "25. Many people move to _____ cities in search of _____ better job opportunities and a higher standard of living.",
+                options: [
+                    { text: "the / the", correct: false },
+                    { text: "Ø / Ø", correct: true },
+                    { text: "the / Ø", correct: false },
+                    { text: "Ø / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Nhiều người chuyển đến các thành phố để tìm kiếm cơ hội việc làm tốt hơn và mức sống cao hơn.",
+                    optionsDict: [
+                        "Vị trí 1: 'cities' (các thành phố nói chung - danh từ số nhiều -> Ø)",
+                        "Vị trí 2: 'better job opportunities' (cơ hội việc làm tốt hơn - danh từ số nhiều khái quát -> Ø)"
+                    ],
+                    whyCorrect: "Cả hai từ đều là danh từ số nhiều mang nghĩa chung khái quát nên không dùng mạo từ.",
+                    whyIncorrect: "Dùng 'the' sẽ biến chúng thành những thành phố hay cơ hội đã xác định cụ thể."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "26. _____ flexibility is _____ key requirement for those working in the fast-paced world of advertising.",
+                options: [
+                    { text: "Ø / a", correct: true },
+                    { text: "The / the", correct: false },
+                    { text: "A / a", correct: false },
+                    { text: "Ø / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Sự linh hoạt là một yêu cầu cốt lõi đối với những người làm việc trong thế giới quảng cáo đầy nhịp độ nhanh.",
+                    optionsDict: [
+                        "Vị trí 1: 'flexibility' (sự linh hoạt - danh từ trừu tượng -> Ø)",
+                        "Vị trí 2: 'a key requirement' (một yêu cầu then chốt -> 'a')"
+                    ],
+                    whyCorrect: "'Flexibility' là khái niệm chung; 'key requirement' danh từ đếm được số ít mang nghĩa 'một...' nên dùng 'a'.",
+                    whyIncorrect: "Dùng 'The' ở đầu sai nét nghĩa khái quát."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "27. After _____ long discussion, the board of directors finally reached _____ unanimous decision.",
+                options: [
+                    { text: "a / an", correct: false },
+                    { text: "the / a", correct: false },
+                    { text: "a / a", correct: true },
+                    { text: "the / an", correct: false }
+                ],
+                explanation: {
+                    translation: "Sau một cuộc thảo luận dài, hội đồng quản trị cuối cùng đã đưa ra một quyết định nhất trí.",
+                    optionsDict: [
+                        "Vị trí 1: 'a long discussion' (một cuộc thảo luận kéo dài -> 'a')",
+                        "Vị trí 2: 'a unanimous decision' ('unanimous' phát âm bắt đầu bằng phụ âm /j/ -> dùng 'a')"
+                    ],
+                    whyCorrect: "'Unanimous' phát âm là /juːˈnæn.ɪ.məs/ (bắt đầu bằng phụ âm /j/) nên dùng 'a' chứ không dùng 'an'.",
+                    whyIncorrect: "Dùng 'an' trước 'unanimous' là lỗi sai phổ biến do nhìn nhầm nguyên âm chữ cái 'u'."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "28. _____ artificial intelligence is expected to have _____ profound impact on the future of manual labor.",
+                options: [
+                    { text: "Ø / a", correct: true },
+                    { text: "The / the", correct: false },
+                    { text: "An / a", correct: false },
+                    { text: "The / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Trí tuệ nhân tạo được dự đoán sẽ có tác động sâu sắc đến tương lai của lao động tay chân.",
+                    optionsDict: [
+                        "Vị trí 1: 'artificial intelligence' (trí tuệ nhân tạo nói chung -> Ø)",
+                        "Vị trí 2: cụm 'have a profound impact on' (có ảnh hưởng sâu sắc lên)"
+                    ],
+                    whyCorrect: "'Artificial intelligence' là thuật ngữ chung không mạo từ; 'have a profound impact on' là cụm từ chuẩn.",
+                    whyIncorrect: "Dùng 'An' ở vị trí 1 là sai vì 'artificial intelligence' không đếm được."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "29. It is important to have _____ mentor who can provide _____ guidance during the early stages of your career.",
+                options: [
+                    { text: "a / Ø", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / a", correct: false },
+                    { text: "the / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Điều quan trọng là có một người cố vấn, người có thể đưa ra sự hướng dẫn trong giai đoạn đầu của sự nghiệp.",
+                    optionsDict: [
+                        "Vị trí 1: 'a mentor' (một người cố vấn bất kỳ -> 'a')",
+                        "Vị trí 2: 'guidance' (sự hướng dẫn - danh từ không đếm được -> Ø)"
+                    ],
+                    whyCorrect: "'Mentor' danh từ số ít đếm được dùng 'a'; 'guidance' là danh từ không đếm được không có mạo từ.",
+                    whyIncorrect: "Dùng 'a' trước 'guidance' là sai quy tắc danh từ không đếm được."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "30. _____ youth of today face _____ much more competitive job market than previous generations did.",
+                options: [
+                    { text: "Ø / the", correct: false },
+                    { text: "The / a", correct: true },
+                    { text: "A / the", correct: false },
+                    { text: "The / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Giới trẻ ngày nay phải đối mặt với một thị trường việc làm cạnh tranh hơn nhiều so với các thế hệ trước.",
+                    optionsDict: [
+                        "Vị trí 1: 'The youth of today' (giới trẻ ngày nay - đã xác định bởi 'of today' -> 'The')",
+                        "Vị trí 2: 'a much more competitive job market' (một thị trường việc làm... -> 'a')"
+                    ],
+                    whyCorrect: "'The youth of today' là nhóm đối tượng đã giới hạn cụ thể; 'a job market' đề cập đến một loại thị trường.",
+                    whyIncorrect: "Bỏ 'The' ở vị trí đầu làm thiếu đi sự xác định cụ thể của đối tượng giới trẻ ngày nay."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "31. She has _____ talent for _____ languages, which has helped her tremendously in her role as a diplomat.",
+                options: [
+                    { text: "a / Ø", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / the", correct: false },
+                    { text: "Ø / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Cô ấy có năng khiếu học ngôn ngữ, điều này đã giúp ích cho cô ấy rất nhiều trong vai trò là một nhà ngoại giao.",
+                    optionsDict: [
+                        "Vị trí 1: cụm 'have a talent for' (có năng khiếu về cái gì)",
+                        "Vị trí 2: 'languages' (các ngôn ngữ nói chung - danh từ số nhiều -> Ø)"
+                    ],
+                    whyCorrect: "'have a talent for' là cụm collocations cố định; 'languages' số nhiều chỉ chung các thứ tiếng.",
+                    whyIncorrect: "Thêm 'the' trước 'languages' là sai vì không chỉ định rõ ngôn ngữ cụ thể nào."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "32. Many employees feel that _____ overtime pay is _____ fair compensation for their extra hard work.",
+                options: [
+                    { text: "Ø / a", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "Ø / Ø", correct: false },
+                    { text: "the / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Nhiều nhân viên cảm thấy rằng tiền làm thêm giờ là một khoản bồi thường công bằng cho công sức vất vả của họ.",
+                    optionsDict: [
+                        "Vị trí 1: 'overtime pay' (tiền làm thêm giờ - danh từ không đếm được -> Ø)",
+                        "Vị trí 2: 'a fair compensation' (một sự đền bù/khoản bồi thường thỏa đáng -> 'a')"
+                    ],
+                    whyCorrect: "'Overtime pay' khái quát không mạo từ; 'compensation' khi kết hợp với tính từ mang nghĩa một khoản đền bù dùng 'a'.",
+                    whyIncorrect: "Dùng 'the' trước 'overtime pay' là thừa mạo từ xác định."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "33. _____ success often depends on _____ ability to learn from failure and keep moving forward.",
+                options: [
+                    { text: "Ø / the", correct: true },
+                    { text: "The / the", correct: false },
+                    { text: "A / an", correct: false },
+                    { text: "Ø / an", correct: false }
+                ],
+                explanation: {
+                    translation: "Thành công thường phụ thuộc vào khả năng học hỏi từ thất bại và tiếp tục tiến lên.",
+                    optionsDict: [
+                        "Vị trí 1: 'success' (sự thành công nói chung -> Ø)",
+                        "Vị trí 2: cụm 'the ability to V' (khả năng làm gì đó -> 'the')"
+                    ],
+                    whyCorrect: "'Success' là danh từ trừu tượng chung; 'the ability to do sth' là cụm cố định chỉ khả năng cụ thể.",
+                    whyIncorrect: "Dùng 'The' ở vị trí 1 gây hẹp nghĩa khái niệm thành công."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "34. Being _____ flight attendant requires _____ excellent communication skills and a friendly personality.",
+                options: [
+                    { text: "a / Ø", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / an", correct: false },
+                    { text: "an / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Làm một tiếp viên hàng không đòi hỏi kỹ năng giao tiếp xuất sắc và một nhân cách thân thiện.",
+                    optionsDict: [
+                        "Vị trí 1: 'a flight attendant' (chỉ nghề nghiệp số ít -> dùng 'a')",
+                        "Vị trí 2: 'excellent communication skills' (các kỹ năng giao tiếp - danh từ số nhiều -> Ø)"
+                    ],
+                    whyCorrect: "Tên nghề nghiệp số ít luôn dùng 'a/an'; danh từ số nhiều chỉ kỹ năng chung không mạo từ.",
+                    whyIncorrect: "Dùng 'an' trước 'flight' là sai vì 'flight' bắt đầu bằng phụ âm /f/."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "35. _____ poverty is _____ complex issue that requires global cooperation to be effectively addressed.",
+                options: [
+                    { text: "The / a", correct: false },
+                    { text: "Ø / a", correct: true },
+                    { text: "Ø / the", correct: false },
+                    { text: "The / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Nạn nghèo đói là một vấn đề phức tạp đòi hỏi sự hợp tác toàn cầu để được giải quyết hiệu quả.",
+                    optionsDict: [
+                        "Vị trí 1: 'poverty' (nạn nghèo đói - danh từ không đếm được -> Ø)",
+                        "Vị trí 2: 'a complex issue' (một vấn đề phức tạp -> 'a')"
+                    ],
+                    whyCorrect: "'Poverty' danh từ trừu tượng khái quát không mạo từ; 'issue' danh từ đếm được số ít dùng 'a'.",
+                    whyIncorrect: "Dùng 'The' ở đầu sai nguyên tắc danh từ trừu tượng."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "36. He decided to take _____ career break to focus on _____ his personal growth and health.",
+                options: [
+                    { text: "the / Ø", correct: false },
+                    { text: "a / the", correct: false },
+                    { text: "a / Ø", correct: true },
+                    { text: "the / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy quyết định tạm nghỉ công việc một thời gian để tập trung vào sự phát triển cá nhân và sức khỏe của mình.",
+                    optionsDict: [
+                        "Vị trí 1: cụm 'take a career break' (tạm nghỉ làm một thời gian)",
+                        "Vị trí 2: trước tính từ sở hữu 'his' không dùng mạo từ -> Ø"
+                    ],
+                    whyCorrect: "'take a career break' là cụm từ cố định; tuyệt đối không đặt mạo từ trước từ chỉ sở hữu như 'his/my/her'.",
+                    whyIncorrect: "Chèn 'the' trước tính từ sở hữu 'his' là lỗi vi phạm ngữ pháp cơ bản."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "37. _____ unemployment is one of the most pressing social problems in _____ modern world.",
+                options: [
+                    { text: "Ø / the", correct: true },
+                    { text: "The / the", correct: false },
+                    { text: "An / a", correct: false },
+                    { text: "Ø / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Tình trạng thất nghiệp là một trong những vấn đề xã hội nhức nhối nhất trong thế giới hiện đại.",
+                    optionsDict: [
+                        "Vị trí 1: 'unemployment' (nạn thất nghiệp - danh từ không đếm được -> Ø)",
+                        "Vị trí 2: cụm 'the modern world' (thế giới hiện đại -> dùng 'the')"
+                    ],
+                    whyCorrect: "'Unemployment' nói chung không mạo từ; 'the modern world' là cụm cố định xác định.",
+                    whyIncorrect: "Dùng 'The' ở đầu làm sai tính khái quát của hiện tượng xã hội."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "38. We need to find _____ more sustainable way to manage _____ natural resources in the future.",
+                options: [
+                    { text: "the / the", correct: false },
+                    { text: "a / Ø", correct: true },
+                    { text: "a / the", correct: false },
+                    { text: "the / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Chúng ta cần tìm một phương cách bền vững hơn để quản lý tài nguyên thiên nhiên trong tương lai.",
+                    optionsDict: [
+                        "Vị trí 1: 'a more sustainable way' (một cách thức bền vững hơn -> 'a')",
+                        "Vị trí 2: 'natural resources' (tài nguyên thiên nhiên nói chung - số nhiều -> Ø)"
+                    ],
+                    whyCorrect: "'Way' danh từ số ít lần đầu nhắc tới dùng 'a'; 'natural resources' danh từ số nhiều chung không mạo từ.",
+                    whyIncorrect: "Dùng 'the' trước 'natural resources' làm hẹp nghĩa các nguồn tài nguyên."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "39. _____ courage to take risks is _____ essential trait for any successful entrepreneur.",
+                options: [
+                    { text: "The / an", correct: true },
+                    { text: "Ø / an", correct: false },
+                    { text: "A / the", correct: false },
+                    { text: "The / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Sự dũng cảm chấp nhận rủi ro là một đặc điểm thiết yếu đối với bất kỳ doanh nhân thành công nào.",
+                    optionsDict: [
+                        "Vị trí 1: 'The courage to take risks' (sự dũng cảm được xác định bởi cụm 'to take risks' đằng sau)",
+                        "Vị trí 2: 'an essential trait' ('essential' bắt đầu bằng nguyên âm /ɪ/ -> 'an')"
+                    ],
+                    whyCorrect: "'Courage' đã được thu hẹp phạm vi xác định nhờ cụm động từ theo sau nên dùng 'The'; 'essential' đi với 'an'.",
+                    whyIncorrect: "Bỏ 'The' ở vị trí đầu là bỏ qua yếu tố xác định đằng sau."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "40. To apply for this vacancy, you must have _____ bachelor's degree in _____ business administration.",
+                options: [
+                    { text: "the / the", correct: false },
+                    { text: "a / Ø", correct: true },
+                    { text: "an / the", correct: false },
+                    { text: "a / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Để ứng tuyển vào vị trí này, bạn phải có bằng cử nhân ngành quản trị kinh doanh.",
+                    optionsDict: [
+                        "Vị trí 1: 'a bachelor's degree' (một tấm bằng cử nhân -> 'a')",
+                        "Vị trí 2: 'business administration' (ngành quản trị kinh doanh - tên ngành học -> Ø)"
+                    ],
+                    whyCorrect: "'bachelor's degree' chỉ loại bằng cấp số ít dùng 'a'; tên ngành học chuyên môn không mạo từ.",
+                    whyIncorrect: "Dùng 'an' trước 'bachelor' là sai do 'bachelor' bắt đầu bằng phụ âm /b/."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "41. _____ teamwork is often _____ most effective way to solve complex problems in _____ workplace.",
+                options: [
+                    { text: "Ø / the", correct: true },
+                    { text: "The / the", correct: false },
+                    { text: "A / a", correct: false },
+                    { text: "Ø / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Làm việc nhóm thường là cách hiệu quả nhất để giải quyết các vấn đề phức tạp tại nơi làm việc.",
+                    optionsDict: [
+                        "Vị trí 1: 'teamwork' (việc làm nhóm - danh từ không đếm được nói chung -> Ø)",
+                        "Vị trí 2: 'in the workplace' (cụm từ cố định tại nơi làm việc -> 'the')"
+                    ],
+                    whyCorrect: "'Teamwork' không mạo từ; 'in the workplace' là cụm cố định trong Tiếng Anh thương mại.",
+                    whyIncorrect: "Dùng 'The' trước 'teamwork' là sai quy tắc danh từ khái quát."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "42. He is _____ only person in our department who can speak _____ Japanese fluently.",
+                options: [
+                    { text: "an / the", correct: false },
+                    { text: "the / Ø", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy là người duy nhất trong phòng ban của chúng tôi có thể nói tiếng Nhật trôi chảy.",
+                    optionsDict: [
+                        "Vị trí 1: 'the only person' ('the only' tính từ duy nhất -> dùng 'the')",
+                        "Vị trí 2: 'Japanese' (tên ngôn ngữ -> Ø)"
+                    ],
+                    whyCorrect: "Từ 'only' mang nghĩa duy nhất bắt buộc đi với 'the'; tên ngôn ngữ không có 'the'.",
+                    whyIncorrect: "Dùng 'the' trước 'Japanese' bị hiểu nhầm sang người Nhật Bản."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "43. Many people believe that _____ luck plays _____ important role in achieving professional success.",
+                options: [
+                    { text: "Ø / an", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / an", correct: false },
+                    { text: "the / an", correct: false }
+                ],
+                explanation: {
+                    translation: "Nhiều người tin rằng sự may mắn đóng một vai trò quan trọng trong việc đạt được thành công nghề nghiệp.",
+                    optionsDict: [
+                        "Vị trí 1: 'luck' (sự may mắn - danh từ không đếm được -> Ø)",
+                        "Vị trí 2: cụm 'play an important role in' ('important' bắt đầu bằng nguyên âm /ɪ/ -> 'an')"
+                    ],
+                    whyCorrect: "'Luck' là danh từ trừu tượng; 'play an important role in' là cụm từ cố định.",
+                    whyIncorrect: "Dùng 'a' trước 'important' là sai quy tắc âm nguyên âm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "44. In the end, she decided to accept _____ job offer from a multinational corporation.",
+                options: [
+                    { text: "the / a", correct: true },
+                    { text: "Ø / the", correct: false },
+                    { text: "the / the", correct: false },
+                    { text: "an / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Cuối cùng, cô ấy đã quyết định chấp nhận lời đề nghị công việc từ một tập đoàn đa quốc gia.",
+                    optionsDict: [
+                        "Vị trí 1: 'the job offer' (lời đề nghị công việc đã được xác định rõ là từ tập đoàn đa quốc gia)"
+                    ],
+                    whyCorrect: "'job offer' đã được xác định cụ thể bởi cụm giới từ chỉ nguồn gốc đằng sau nên dùng 'the'.",
+                    whyIncorrect: "Bỏ mạo từ làm danh từ đếm được số ít bị đứng thiếu ngữ pháp."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "45. _____ climate change is _____ global threat that requires immediate action from all nations.",
+                options: [
+                    { text: "Ø / a", correct: true },
+                    { text: "The / a", correct: false },
+                    { text: "Ø / the", correct: false },
+                    { text: "The / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Biến đổi khí hậu là một mối đe dọa toàn cầu đòi hỏi hành động ngay lập tức từ tất cả các quốc gia.",
+                    optionsDict: [
+                        "Vị trí 1: 'climate change' (sự biến đổi khí hậu - hiện tượng nói chung -> Ø)",
+                        "Vị trí 2: 'a global threat' (một mối đe dọa toàn cầu -> 'a')"
+                    ],
+                    whyCorrect: "'Climate change' là hiện tượng chung không mạo từ; 'threat' danh từ đếm được số ít dùng 'a'.",
+                    whyIncorrect: "Dùng 'The' ở vị trí đầu làm hẹp nghĩa hiện tượng toàn cầu."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "46. Having _____ positive attitude can make _____ big difference during a job interview.",
+                options: [
+                    { text: "a / the", correct: false },
+                    { text: "the / a", correct: false },
+                    { text: "a / a", correct: true },
+                    { text: "Ø / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Có một thái độ tích cực có thể tạo ra một sự khác biệt lớn trong một buổi phỏng vấn xin việc.",
+                    optionsDict: [
+                        "Vị trí 1: 'a positive attitude' (một thái độ tích cực -> 'a')",
+                        "Vị trí 2: cụm 'make a big difference' (tạo nên một sự khác biệt lớn)"
+                    ],
+                    whyCorrect: "Cả hai danh từ đều mang nghĩa số ít chưa xác định đề cập lần đầu; 'make a difference' là cụm cố định.",
+                    whyIncorrect: "Dùng 'the' ở vị trí thứ hai làm sai cụm idioms cố định."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "47. She is currently _____ intern at _____ law firm in the city center.",
+                options: [
+                    { text: "an / a", correct: true },
+                    { text: "a / the", correct: false },
+                    { text: "an / the", correct: false },
+                    { text: "a / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Cô ấy hiện là một thực tập sinh tại một công ty luật ở trung tâm thành phố.",
+                    optionsDict: [
+                        "Vị trí 1: 'an intern' ('intern' bắt đầu bằng nguyên âm /ɪ/ -> dùng 'an')",
+                        "Vị trí 2: 'a law firm' (một công ty luật lần đầu nhắc đến -> 'a')"
+                    ],
+                    whyCorrect: "'Intern' nghề nghiệp/vị trí bắt đầu bằng nguyên âm dùng 'an'; 'firm' danh từ đếm được số ít dùng 'a'.",
+                    whyIncorrect: "Dùng 'a' trước 'intern' là sai quy tắc âm nguyên âm."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "48. _____ honesty is _____ best policy when dealing with difficult clients.",
+                options: [
+                    { text: "The / the", correct: false },
+                    { text: "Ø / a", correct: false },
+                    { text: "Ø / the", correct: true },
+                    { text: "The / a", correct: false }
+                ],
+                explanation: {
+                    translation: "Sự trung thực là thượng sách khi làm việc với những khách hàng khó tính.",
+                    optionsDict: [
+                        "Vị trí 1: 'honesty' (sự trung thực - danh từ trừu tượng -> Ø)",
+                        "Vị trí 2: 'the best policy' (tục ngữ cố định 'Honesty is the best policy')"
+                    ],
+                    whyCorrect: "'Honesty' là danh từ trừu tượng không đếm được; 'the best policy' đi với so sánh nhất trong tục ngữ.",
+                    whyIncorrect: "Thêm 'The' trước 'honesty' làm vi phạm cấu trúc thành ngữ/tục ngữ."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "49. We are looking for _____ candidate with _____ experience in project management.",
+                options: [
+                    { text: "a / Ø", correct: true },
+                    { text: "the / the", correct: false },
+                    { text: "a / an", correct: false },
+                    { text: "the / Ø", correct: false }
+                ],
+                explanation: {
+                    translation: "Chúng tôi đang tìm kiếm một ứng viên có kinh nghiệm trong quản lý dự án.",
+                    optionsDict: [
+                        "Vị trí 1: 'a candidate' (một ứng viên bất kỳ -> 'a')",
+                        "Vị trí 2: 'experience' (kinh nghiệm - danh từ không đếm được -> Ø)"
+                    ],
+                    whyCorrect: "'Candidate' danh từ số ít đếm được chưa xác định dùng 'a'; 'experience' không đếm được không có mạo từ.",
+                    whyIncorrect: "Dùng 'an' trước 'experience' là sai khi 'experience' mang ý nghĩa kinh nghiệm chung."
+                }
+            },
+            {
+                type: "ARTICLES",
+                question: "50. _____ goal of this project is to improve _____ efficiency of our production line.",
+                options: [
+                    { text: "Ø / the", correct: false },
+                    { text: "The / the", correct: true },
+                    { text: "The / Ø", correct: false },
+                    { text: "A / the", correct: false }
+                ],
+                explanation: {
+                    translation: "Mục tiêu của dự án này là nâng cao hiệu suất của dây chuyền sản xuất của chúng tôi.",
+                    optionsDict: [
+                        "Vị trí 1: 'The goal of this project' (mục tiêu của dự án này - đã xác định cụ thể)",
+                        "Vị trí 2: 'the efficiency of...' (hiệu suất của... -> danh từ xác định bởi 'of')"
+                    ],
+                    whyCorrect: "Cấu trúc 'N1 + of + N2' làm cho cả hai danh từ 'goal' và 'efficiency' đều đã được xác định cụ thể nên dùng 'The / the'.",
+                    whyIncorrect: "Bỏ mạo từ ở khoảng trống là không nhận diện được cấu trúc xác định 'of'."
+                }
+            }
+        ];
+
+        let questions = [];
+
+        function shuffleArray(array) {
+            let cur = array.slice();
+            for (let i = cur.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cur[i], cur[j]] = [cur[j], cur[i]];
+            }
+            return cur;
+        }
+
+        function initQuiz() {
+            questions = rawQuestions.map(q => {
+                let shuffledOpts = shuffleArray(q.options);
+                return {
+                    ...q,
+                    shuffledOptions: shuffledOpts,
+                    userAnswerIndex: null
+                };
+            });
+            renderQuiz();
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+
+                const optionsHTML = q.shuffledOptions.map((opt, optIdx) => {
+                    const letters = ['A', 'B', 'C', 'D'];
+                    return `
+                        <button class="opt-btn" id="opt-${idx}-${optIdx}" onclick="selectAnswer(${idx}, ${optIdx})">
+                            <span class="opt-prefix">${letters[optIdx]}</span>
+                            <span>${opt.text}</span>
+                        </button>
+                    `;
+                }).join('');
+
+                const exp = q.explanation;
+                const expDictHTML = exp.optionsDict.map(item => `<li>${item}</li>`).join('');
+
+                card.innerHTML = `
+                    <div class="q-header">
+                        <span class="q-number">Câu ${idx + 1} / ${questions.length}</span>
+                        <span class="q-type">${q.type}</span>
+                    </div>
+                    <div class="q-text">${q.question}</div>
+                    <div class="options-grid">
+                        ${optionsHTML}
+                    </div>
+                    <div class="explanation-box" id="exp-${idx}">
+                        <div class="exp-head">💡 GIẢI THÍCH MẠO TỪ TỪ MS LÊ HẰNG:</div>
+                        <div class="exp-section"><strong>1. Dịch câu hỏi:</strong> ${exp.translation}</div>
+                        <div class="exp-section">
+                            <strong>2. Phân tích ngữ pháp từng vị trí:</strong>
+                            <ul class="exp-list">${expDictHTML}</ul>
+                        </div>
+                        <div class="exp-section"><strong>3. Tại sao chọn đáp án này?</strong> ${exp.whyCorrect}</div>
+                        <div class="exp-section"><strong>4. Tại sao các đáp án khác sai?</strong> ${exp.whyIncorrect}</div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function selectAnswer(qIdx, optIdx) {
+            const q = questions[qIdx];
+            if (q.userAnswerIndex !== null) return;
+
+            q.userAnswerIndex = optIdx;
+            const selectedOpt = q.shuffledOptions[optIdx];
+            const isCorrect = selectedOpt.correct;
+
+            const selectedBtn = document.getElementById(`opt-${qIdx}-${optIdx}`);
+
+            if (isCorrect) {
+                selectedBtn.classList.add('correct');
+                playSound('correct');
+                triggerConfetti();
+            } else {
+                selectedBtn.classList.add('wrong');
+                playSound('wrong');
+
+                q.shuffledOptions.forEach((o, i) => {
+                    if (o.correct) {
+                        document.getElementById(`opt-${qIdx}-${i}`).classList.add('correct');
+                    }
+                });
+            }
+
+            q.shuffledOptions.forEach((_, i) => {
+                const b = document.getElementById(`opt-${qIdx}-${i}`);
+                b.disabled = true;
+                b.style.cursor = 'default';
+            });
+
+            document.getElementById(`exp-${qIdx}`).classList.add('show');
+        }
+
+        function submitQuiz() {
+            let correctCount = 0;
+
+            questions.forEach(q => {
+                if (q.userAnswerIndex !== null && q.shuffledOptions[q.userAnswerIndex].correct) {
+                    correctCount++;
+                }
+            });
+
+            const total = questions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+
+            document.getElementById('score-text').innerText = `${correctCount} / ${total} (${percentage}%)`;
+
+            let comment = "";
+            if (percentage < 50) {
+                comment = "Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích quy tắc mạo từ và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else if (percentage <= 80) {
+                comment = "Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích quy tắc mạo từ và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else {
+                comment = "Làm tốt lắm, con cố gắng rinh điểm 10 ở lần sau nha!";
+                triggerConfetti();
+            }
+
+            document.getElementById('comment-text').innerText = comment;
+            document.getElementById('result-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('result-modal').style.display = 'none';
+        }
+
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#8854C0', '#FDCB6E', '#00C9A7', '#FF7675', '#6C5CE7', '#00D26A'];
+
+            for (let i = 0; i < 60; i++) {
+                particles.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 14,
+                    vy: (Math.random() - 0.7) * 14,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 90
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = false;
+
+                particles.forEach(p => {
+                    if (p.life > 0) {
+                        alive = true;
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.4;
+                        p.life -= 2;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                });
+
+                if (alive) requestAnimationFrame(animate);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            animate();
+        }
+
+        window.onload = initQuiz;
+    </script>
+</body>
+</html>
